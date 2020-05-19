@@ -74,7 +74,7 @@ export default {
     },
     bonus: function (event) {
       if (this.bonusActivated) {
-        this.updateClick(1)
+        this.updateClick(2)
         this.addLog('PERFECT +2')
       } else {
         this.updateClick()
@@ -96,7 +96,7 @@ export default {
       }
 
       if (increment) {
-        this.click++
+        this.click += increment
       } else {
         this.click--
       }
