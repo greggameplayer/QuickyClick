@@ -2,7 +2,7 @@
   <div class="content">
     <div class="game" @click="clickOnInterface" :class="{wait: !player || stopped}">
       <span class="time" v-if="!stopped">{{ gameTime }}</span>
-      <span v-if="player && !stopped" class="round" :style="roundStyle" :class="{bonus: bonusActivated, badColor: badColorActivated}" @click.stop="clickOnRound" @click.alt.stop="bonus"></span>
+      <span v-if="player && !stopped" class="round" :style="roundStyle" :class="{bonus: bonusActivated, badColor: badColorActivated}" @click.stop.exact="clickOnRound" @click.alt.stop="bonus"></span>
     </div>
     <div class="log text-center">
       <p :key="item.id" v-for="item in userLogs">
@@ -41,7 +41,7 @@ export default {
     },
     player: function () {
       this.stopped = false
-      let self = this
+      const self = this
 
       setInterval(function () {
         self.updateTime()
@@ -60,7 +60,7 @@ export default {
       setTimeout(this.updateRound, 1000)
 
       this.updateClick(1)
-      this.addLog(`BRAVO !`)
+      this.addLog('BRAVO !')
     },
     updateTime: function () {
       if (this.gameTime === 0) {
@@ -75,10 +75,10 @@ export default {
     bonus: function (event) {
       if (this.bonusActivated) {
         this.updateClick(1)
-        this.addLog(`PERFECT +2`)
+        this.addLog('PERFECT +2')
       } else {
         this.updateClick()
-        this.addLog(`?? -1`)
+        this.addLog('?? -1')
       }
     },
     start: function (event) {
@@ -88,7 +88,7 @@ export default {
     },
     clickOnInterface: function (event) {
       this.updateClick()
-      this.addLog(`Oh Non -1`)
+      this.addLog('Oh Non -1')
     },
     updateClick: function (increment) {
       if (!this.player || this.stopped) {
@@ -102,9 +102,9 @@ export default {
       }
     },
     updateRound: function () {
-      let size = Math.random() * (10 - 5) + 5
-      let top = Math.random() * (40 - 5) + 5
-      let left = Math.random() * (90 - 5) + 5
+      const size = Math.random() * (10 - 5) + 5
+      const top = Math.random() * (40 - 5) + 5
+      const left = Math.random() * (90 - 5) + 5
 
       this.badColorActivated = size < 5
       this.bonusActivated = size > 8
@@ -123,8 +123,8 @@ export default {
         return
       }
 
-      let typeOfMessage = type || 'user'
-      this.collection.unshift({id: this.collection.length / 2, message: message, type: typeOfMessage})
+      const typeOfMessage = type || 'user'
+      this.collection.unshift({ id: this.collection.length / 2, message: message, type: typeOfMessage })
     }
   }
 }

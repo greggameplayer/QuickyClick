@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     setPlayer: function (event) {
-      let playerName = event.target[0].value
+      const playerName = event.target[0].value
 
       if (!playerName) {
         window.alert('Merci de renseigner votre nom')
@@ -54,7 +54,7 @@ export default {
           return
         }
       }
-      this.players.push({name: playerName, id: this.playerId, score: 0})
+      this.players.push({ name: playerName, id: this.playerId, score: 0 })
       this.$emit('playersArray', this.players)
       this.playerId++
     }

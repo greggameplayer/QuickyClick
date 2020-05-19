@@ -19,7 +19,7 @@ export default {
   watch: {
     time: function () {
       if (!this.time || !this.player) {
-        let self = this
+        const self = this
         setTimeout(function () {
           self.finished = true
         }, 1000)

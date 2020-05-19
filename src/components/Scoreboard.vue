@@ -32,7 +32,7 @@ export default {
   watch: {
     time: function () {
       if (!this.time) {
-        let self = this
+        const self = this
         let modifyScore = false
         setTimeout(function () {
           for (let i = 0; i < self.playersArray.length; i++) {
