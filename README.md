@@ -1,4 +1,5 @@
 # quickyclick
+A project made to learn vue.js
 
 ## Project setup
 ```
