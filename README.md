@@ -1,4 +1,6 @@
 # quickyclick
+[![Build Status](https://travis-ci.org/greggameplayer/QuickyClick.svg?branch=master)](https://travis-ci.org/greggameplayer/QuickyClick)
+<br><br>
 A project made to learn vue.js
 
 ## Project setup
