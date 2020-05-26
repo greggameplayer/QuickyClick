@@ -5,7 +5,7 @@ node_js:
 cache: npm
 
 script:
-- echo "FirebaseAPIKey=$FirebaseAPIKey" > .env
+- echo "VUE_APP_FirebaseAPIKey=$FirebaseAPIKey" > .env.local
 - npm run build
 
 deploy:
