@@ -3,6 +3,8 @@
 <br><br>
 A project made to learn vue.js
 
+Hosted here : [Click here](https://greggameplayer.github.io/QuickyClick)
+
 ## Project setup
 ```
 npm install
