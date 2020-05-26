@@ -22,7 +22,7 @@
         </button>
         </div>
         <div>
-          <button v-on:click="play()" class="btn btn-primary" id="btnplay">
+          <button v-on:click="play()" :class="{hide: !renderAuth}" class="btn btn-primary" id="btnplay">
             Play
           </button>
         </div>
