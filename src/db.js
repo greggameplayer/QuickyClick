@@ -4,7 +4,7 @@ import 'firebase/firestore'
 
 // Get a Firestore instance
 export const db = firebase
-  .initializeApp({ apiKey: 'AIzaSyBlgzxZvzcGnTC_Wl-HeVs9Yas9C9-eRcg', projectId: 'quickyclick-87728', authDomain: 'quickyclick-87728.firebaseapp.com' })
+  .initializeApp({ apiKey: process.env.VUE_APP_FirebaseAPIKey, projectId: 'quickyclick-87728', authDomain: 'quickyclick-87728.firebaseapp.com' })
   .firestore()
 
 // Export types that exists in Firestore
