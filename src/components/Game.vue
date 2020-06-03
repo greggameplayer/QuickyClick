@@ -60,7 +60,7 @@ export default {
       setTimeout(this.updateRound, 1000)
 
       this.updateClick(1)
-      this.addLog('BRAVO !')
+      this.addLog('CONGRATULATION (+1)')
     },
     updateTime: function () {
       if (this.gameTime === 0) {
@@ -75,10 +75,10 @@ export default {
     bonus: function (event) {
       if (this.bonusActivated) {
         this.updateClick(2)
-        this.addLog('PERFECT +2')
+        this.addLog('PERFECT (+2)')
       } else {
         this.updateClick()
-        this.addLog('?? -1')
+        this.addLog('?? (-1)')
       }
     },
     start: function (event) {
@@ -88,7 +88,7 @@ export default {
     },
     clickOnInterface: function (event) {
       this.updateClick()
-      this.addLog('Oh Non -1')
+      this.addLog('OH NO (-1)')
     },
     updateClick: function (increment) {
       if (!this.player || this.stopped) {

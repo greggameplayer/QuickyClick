@@ -87,7 +87,7 @@ export default {
     setPlayer: function (playerName) {
       this.player = playerName
       this.$emit('playerName', playerName)
-      this.welcomeMessage = `Bonjour ${this.player} !`
+      this.welcomeMessage = `Welcome ${this.player} !`
 
       for (let i = 0; i < this.players.length; i++) {
         if (playerName === this.players[i].name) {
@@ -162,7 +162,7 @@ export default {
     },
     play: function () {
       if (!this.player) {
-        window.alert('Merci de vous connecter')
+        window.alert('Please connect yourself')
         return
       }
       this.$emit('player')
