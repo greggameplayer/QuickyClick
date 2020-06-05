@@ -6,9 +6,11 @@ import router from './router'
 import 'popper.js'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import VueSimpleAlert from 'vue-simple-alert'
 
 Vue.config.productionTip = false
 Vue.use(firestorePlugin)
+Vue.use(VueSimpleAlert)
 
 new Vue({
   router,

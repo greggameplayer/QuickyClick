@@ -3,7 +3,7 @@
     <div class="score" v-if="player">
       {{ score }}
     </div>
-    <a v-if="finished" class="btn btn-primary mt-3" href="./">Relancer</a>
+    <a v-if="finished" class="btn btn-primary mt-3" href="./">Restart</a>
   </div>
 </template>
 
